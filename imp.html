@@ -75,15 +75,21 @@
         let myTable = document.getElementById('excel_data');
         let tr = myTable.getElementsByTagName('tr');
         for(var i = 0;i<tr.length;i++){
-            let td = tr[i].getElementsByTagName('td')[1];
-            if(td){
-                let textvalue = td.textContent || td.innerHTML;
-                if(textvalue.toUpperCase().indexOf(filter) > -1){
+            let td1 = tr[i].getElementsByTagName('td')[1];
+            let td2 = tr[i].getElementsByTagName('td')[2];
+            if(td1){
+                let textvalue1 = td1.textContent || td1.innerHTML;
+                if(textvalue1.toUpperCase().indexOf(filter) > -1){
                     tr[i].style.display = "";
-
                 }
-                else{
-                    tr[i].style.display = "none";
+                else if(td2){
+                    let textvalue2 = td2.textContent || td2.innerHTML;
+                    if(textvalue2.toUpperCase().indexOf(filter) > -1){
+                        tr[i].style.display = "";
+                    }
+                    else{
+                        tr[i].style.display = "none";
+                    }
                 }
             }
         }
