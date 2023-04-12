@@ -1,12 +1,46 @@
 body{
     background-color: #eae2b7;
-   background-image:url("https://media.istockphoto.com/id/1180992730/video/cartoon-character-man-talking-isolated-on-green-background-usable-for-presentations.jpg?s=640x640&k=20&c=80pC3hVuyCsfrrGcAJi6fOHosb91OAUQVVlEa0c_HtE=");
    /* background-size:cover; */
     background-size: cover;
     /* In the above stuff along with the content the image is also getting scrolled to avoid follow below thing*/
     background-repeat: no-repeat;
     background-attachment: scroll;
     /* background-repeat: repeat; */
-    background-attachment:fixed;
-    padding-top: 80px;
+    background-attachment:fixed;  
+}
+.maincontainer{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+}
+.container{
+    margin-top: 30px;
+    border: 2px solid red ;
+    border-radius: 5px;
+    height: 500px;
+    width: 150px;
+    background-color: bisque;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.head_title{
+    display: flex;
+}
+
+.head_Title{
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0px 0px 10px;
+}
+.form-02{
+    margin-left: 10px;
+}
+.button-01{
+    margin-left: 10px;
+}
+.card{
+    margin-top: 10px;
 }
