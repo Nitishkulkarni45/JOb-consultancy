@@ -16,7 +16,7 @@ body{
     font-family: 'Poppins', sans-serif;
     height: 1000px;
     width: 100vw;
-    position:absolute;
+    
     /* background-attachment: scroll !important; */
     /* background-color: aquamarine; */
 
@@ -53,12 +53,9 @@ body{
     margin-top: 10px;
 }
 #excel_data{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-x: scroll;
     border: 2px dashed black;
     width: 1122px;
     border-radius: 10px;
     font-size: small;
-    position: relative;
 }
