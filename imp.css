@@ -1,19 +1,25 @@
 body{
-    background-color: #eae2b7;
+    /* background-color: aquamarine; */
+    max-height: fit-content;
    /* background-size:cover; */
     background-size: cover;
     /* In the above stuff along with the content the image is also getting scrolled to avoid follow below thing*/
     background-repeat: no-repeat;
     background-attachment: scroll;
-    /* background-repeat: repeat; */
+    background-repeat: repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzN-shBEp_sIgDlfrSE8TH8D6frX7I3sVt3MIn4fXkg&usqp=CAU&ec=48665701");
     background-attachment:fixed;  
+    /* height: 100vh; */
+
 }
 .maincontainer{
     font-family: 'Poppins', sans-serif;
     height: 1000px;
     width: 100vw;
+    position:absolute;
     /* background-attachment: scroll !important; */
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+
 }
 .container{
     margin-top: 30px;
@@ -38,6 +44,7 @@ body{
 }
 .form-02{
     margin-left: 10px;
+    width: 220px !important;
 }
 .button-01{
     margin-left: 10px;
@@ -46,6 +53,12 @@ body{
     margin-top: 10px;
 }
 #excel_data{
-    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed black;
+    width: 1122px;
     border-radius: 10px;
+    font-size: small;
+    position: relative;
 }
