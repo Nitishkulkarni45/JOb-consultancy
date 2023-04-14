@@ -1,5 +1,6 @@
 const excel_file = document.getElementById('excel_file');
-
+var flag = 0;
+var j = 0;
 excel_file.addEventListener('change', (event) => {
     var reader = new FileReader();
     reader.readAsArrayBuffer(event.target.files[0]);
@@ -26,6 +27,27 @@ excel_file.addEventListener('change', (event) => {
         }
     }
 });
+console.log(flag);
+const searchFunimpmore = () => {
+    let filter = document.getElementById('myInputimpmore').value.toUpperCase();
+    let myTable = document.getElementById('excel_data');
+    let tr = myTable.getElementsByTagName('tr');
+    for (var i = 0; i < tr.length; i++) {
+        let td4 = tr[i].getElementsByTagName('td')[8];
+        // let td5 = tr[i].getElementsByTagName('td')[8];
+        if (td4) {
+            let textvalue3 = td4.textContent || td4.innerHTML;
+            if (textvalue3.toUpperCase().indexOf(filter) > -1) {
+                // tr[i].style.display = "none";
+                flag = 1;
+                j = i;
+                console.log(j);
+            }
+            console.log(j);   
+        }
+    }
+}
+
 const searchFun = () => {
     let filter = document.getElementById('myInput').value.toUpperCase();
     let myTable = document.getElementById('excel_data');
@@ -35,18 +57,24 @@ const searchFun = () => {
         let td2 = tr[i].getElementsByTagName('td')[3];
         if (td1) {
             let textvalue1 = td1.textContent || td1.innerHTML;
-            if (textvalue1.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            }
-            else if (td2) {
-                let textvalue2 = td2.textContent || td2.innerHTML;
-                if (textvalue2.toUpperCase().indexOf(filter) > -1) {
+            console.log(j);
+            if(i != j){
+                if (textvalue1.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = "";
                 }
-                else {
-                    tr[i].style.display = "none";
-                }
+                else if (td2) {
+                    let textvalue2 = td2.textContent || td2.innerHTML;
+                    if (textvalue2.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
                 //    git add . then git commit -m "message" then git push origin master
+            }   
+            }
+            else{
+                tr[i].style.display = "none";
             }
         }
     }
