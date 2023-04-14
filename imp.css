@@ -1,20 +1,20 @@
 body{
     /* background-color: aquamarine; */
-    max-height: fit-content;
+    /* max-height: fit-content; */
    /* background-size:cover; */
     background-size: cover;
     /* In the above stuff along with the content the image is also getting scrolled to avoid follow below thing*/
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-repeat: repeat;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzN-shBEp_sIgDlfrSE8TH8D6frX7I3sVt3MIn4fXkg&usqp=CAU&ec=48665701");
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREzN-shBEp_sIgDlfrSE8TH8D6frX7I3sVt3MIn4fXkg&usqp=CAU&ec=48665701"); */
     background-attachment:fixed;  
     /* height: 100vh; */
 
 }
 .maincontainer{
     font-family: 'Poppins', sans-serif;
-    height: 1000px;
+    height: 100vh;
     width: 100vw;
     
     /* background-attachment: scroll !important; */
@@ -22,12 +22,14 @@ body{
 
 }
 .container{
-    margin-top: 30px;
-    border: 2px solid red ;
-    border-radius: 5px;
+    padding-top: 5px;
+    margin-top: 50px;
+    /* border: 2px solid  ; */
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 1px #867070;
     height: 300px;
     width: 150px;
-    background-color: bisque;
+    background-color: #F5EBEB
 }
 
 .navbar-brand{
@@ -57,5 +59,9 @@ body{
     border: 2px dashed black;
     width: 1122px;
     border-radius: 10px;
-    font-size: small;
+    font-size: small;   
+}
+.main_foot{
+    display: flex;
+    justify-content: center;
 }

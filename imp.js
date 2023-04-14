@@ -21,6 +21,8 @@ excel_file.addEventListener('change', (event) => {
             table_output += '</table>';
 
             document.getElementById('excel_data').innerHTML = table_output;
+            
+            
         }
     }
 });
